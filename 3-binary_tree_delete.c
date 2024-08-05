@@ -4,11 +4,19 @@
  * binary_tree_delete - Function that deletes an
  * entire binary tree
  *
- * @parent: The parent
- * @value: The new value
+ * @tree: Pointer to the root node
  *
- * Return: The new node
+ * Return: Nothing
 */
 
 void binary_tree_delete(binary_tree_t *tree);
-{}
+{
+	binary_tree_t *tmp;
+
+	if (tree == NULL)
+		return;
+
+	
+
+	free(tree);
+}
