@@ -4,11 +4,22 @@
  * binary_tree_inorder - Function that goes through
  * a binary tree using in-order traversal
  *
- * @parent: The parent
- * @value: The new value
+ * @tree: Pointer to the root node
+ * @func: Pointer to a function to call
  *
- * Return: The new node
+ * Return: Nothing
 */
 
 void binary_tree_inorder(const binary_tree_t *tree, void (*func)(int))
-{}
+{
+	if (tree == NULL)
+		return;
+
+	if (func == NULL)
+		return;
+
+	binary_tree_inorder(tree->left, func);
+	func(tree->n);
+	binary_tree_inorder(tree->right, func);
+
+}
