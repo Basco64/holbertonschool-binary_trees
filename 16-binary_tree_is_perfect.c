@@ -4,11 +4,15 @@
  * binary_tree_is_perfect - Function that checks
  * if a binary tree is perfect
  *
- * @parent: The parent
- * @value: The new value
+ * @tree: Pointer to the root node
  *
- * Return: The new node
+ * Return: 1 if is perfect or 0
 */
 
 int binary_tree_is_perfect(const binary_tree_t *tree)
-{}
+{
+
+
+	if (tree == NULL)
+		return (0);
+}
